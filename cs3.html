@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text_1"> Demo  </p>
+    <p id="text_2">Solomon </p>
+</body>
+<script>
+        // Logical Operators  &&,  ||, ! 
+
+        document.writeln(10>3 && 2>10) // false 
+        document.writeln(2>10 || 10>3  ) // true
+        document.writeln(10>3) // false
+        document.writeln(!10>3) // false
+
+        // Assignment Operators 
+        
+        a = 2; // 10 
+        a = a  // 10
+        a = a + 6  // 20
+        a += 30 // 30
+        a -= 4 // 20
+        a/=2 // 2
+        a*=2 // 2
+
+        document.writeln(a)
+
+        // Metods DOM -  Document Object Model
+        document.writeln(document)
+        a =  document.querySelector('#text_1').innerHTML 
+        b =  document.querySelector('#text_1') 
+        document.writeln(a)
+        document.writeln(b)
+        
+        // 
+        document.querySelector('#text_2').innerHTML = "Mary" 
+        b.innerHTML = 'New text'
+        b.style.color='red'
+        b.style.fontSize='40px'
+
+        
+
+</script>
+</html>
