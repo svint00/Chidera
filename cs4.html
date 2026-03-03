@@ -9,6 +9,7 @@
    <div id="demo"></div>
    <ol id="list1"></ol>
    <ul id="list2"></ul>
+   <ul id="list3"></ul>
 </body>
 <script>
  
@@ -38,6 +39,7 @@ document.writeln('<br>')
 cars = [`honda`,`toyota`,'hyundai']
 for(i=0;i<3; i++){
     document.writeln(cars[i])
+    document.querySelector('#list3').innerHTML += '<li>' + cars[i] + '</li'
 }
 
 document.writeln("<b>Welcome</b>")
