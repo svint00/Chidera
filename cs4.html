@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-   
+   <div id="demo"></div>
+   <ol id="list1"></ol>
+   <ul id="list2"></ul>
 </body>
 <script>
  
@@ -18,25 +20,28 @@ for( i = 0; i<10; i++){
 
 fruits = ["Apple",'Water Melon', 'Red',' Blue'] // list
 for(i=0;i<4; i++){
-    document.writeln(fruits[i])
+    document.querySelector('#list1').innerHTML += "<li>" + fruits[i] +"</li>"
 }
 document.writeln("<br>")
 document.writeln("<br>")
 
-courses = ['css','script','py','react','cpp','c#','c']
 // create a new list still loop and print
 
 courses = ['css','script','py','react','cpp','c#','c']
-for(i=0;i<7; i++){
-    document.writeln(courses[i])
+for(i=0; i<7; i++){
+    document.querySelector('#list2').innerHTML += "<li>" + courses[i] + "</li"
 }
 document.writeln('<br>')
 document.writeln('<br>')
 
 
 cars = [`honda`,`toyota`,'hyundai']
-for(i=0;i<3; i++)
-document.writeln(cars[i])
+for(i=0;i<3; i++){
+    document.writeln(cars[i])
+}
+
+document.writeln("<b>Welcome</b>")
+document.querySelector('#demo').innerHTML = '<b>Courses : '+courses +"<b/>"
 
 
 
