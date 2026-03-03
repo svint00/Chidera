@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="demo"></div>
+   <ol id="list1"></ol>
+   <ul id="list2"></ul>
+</body>
+<script>
+ 
+// Loops  - repition, count
+for( i = 0; i<10; i++){
+    document.writeln(i)
+    document.writeln('Yellow')
+}
+
+fruits = ["Apple",'Water Melon', 'Red',' Blue'] // list
+for(i=0;i<4; i++){
+    document.querySelector('#list1').innerHTML += "<li>" + fruits[i] +"</li>"
+}
+document.writeln("<br>")
+document.writeln("<br>")
+
+// create a new list still loop and print
+
+courses = ['css','script','py','react','cpp','c#','c']
+for(i=0; i<7; i++){
+    document.querySelector('#list2').innerHTML += "<li>" + courses[i] + "</li"
+}
+document.writeln('<br>')
+document.writeln('<br>')
+
+
+cars = [`honda`,`toyota`,'hyundai']
+for(i=0;i<3; i++){
+    document.writeln(cars[i])
+}
+
+document.writeln("<b>Welcome</b>")
+document.querySelector('#demo').innerHTML = '<b>Courses : '+courses +"<b/>"
+
+
+
+
+
+</script>
+</html>
