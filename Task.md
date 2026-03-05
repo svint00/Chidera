@@ -69,4 +69,5 @@
    - Displays the result in the console
 8. Create a program that takes a student's name and score and prints:
    `"Student John scored 85 marks."`
+   ` "student " + name +"scored" + scorevalue + " marks"`
 
