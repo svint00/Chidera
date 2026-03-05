@@ -8,6 +8,8 @@
 <body>
   <div id="demo"></div>
   <button type="button" onclick="myfunction()"> My Button </button>
+  <div id="example"></div>
+  <button type="button"onclick='example()'>my button</button>
 </body>
 <script>
   
@@ -37,6 +39,9 @@ function myfunction(){
     document.querySelector('#demo').innerHTML = 'New Text'
 }
 
+function example(){
+document.querySelector('#example').innerHTML = 'first message'
+}
 
 
 
