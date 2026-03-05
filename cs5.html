@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    <p>Ages 18 above</p>
+    <input type="number" id="test_2">
     <p>Enter a number between 5 - 25</p>
     <input type="number" id="test_1">
   <div id="demo"></div>
@@ -50,11 +52,28 @@ function myfunction(){
         test_elt.innerHTML =  "Input Ok"
     }
 }
+
 /*
     age from input
     if age <18 : Cannot vote
     else : Can vote
 */
+function myfunction(){
+    let text = document.querySelector('#test_2').value;
+    let test_elt = document.querySelector('#demo')
+
+     if(text<18){
+        test_elt.innerHTML = "Invalid entry, Number must be >=18"
+    }
+    else(text>18){
+        test_elt.innerHTML = 'Input Ok'
+
+    }
+    
+}
+
+
+
 function example(){
 document.querySelector('#example').innerHTML = 'first message'
 }
