@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    <p>Enter a number between 5 - 25</p>
+    <input type="number" id="test_1">
   <div id="demo"></div>
   <button type="button" onclick="myfunction()"> My Button </button>
   <div id="example"></div>
@@ -36,9 +38,23 @@ else if(time<16){
 // 
 
 function myfunction(){
-    document.querySelector('#demo').innerHTML = 'New Text'
+    let text = document.querySelector('#test_1').value;
+    let test_elt = document.querySelector('#demo')
+    
+    if(text<5){
+        test_elt.innerHTML = "Invalid entry, Number must be >=5"
+    }
+    else if(text>25){
+        test_elt.innerHTML =  "Invalid entry, Number must be <=25"
+    }else{
+        test_elt.innerHTML =  "Input Ok"
+    }
 }
-
+/*
+    age from input
+    if age <18 : Cannot vote
+    else : Can vote
+*/
 function example(){
 document.querySelector('#example').innerHTML = 'first message'
 }
