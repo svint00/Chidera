@@ -12,17 +12,29 @@
 
             <label for=""> Password </label>
             <input type="password" name="" id="password">
-            <div id="response"></div>
+            <div id="response">w434534534</div>
             <button type="button" onclick="submit_form()"> Submit</button>
         </form>
 </body>
 <script>
     function submit_form(){
-        let username = document.querySelector('#usernane')
+        let username = document.querySelector('#username')
         let pasword = document.querySelector('#password')
-        response = document.querySelector('#response')
-        response.innerHTML = 'Form submited'
+        let response = document.querySelector('#response')
+        if(username.value == ''){
+            response.innerHTML = "Username is required";
+            // text red 
+        }
+        else if(password.value == ''){
+            response.innerHTML = "Password is required";
+            // text red
+        }else{
+            response.innerHTML = "OKay"
+            // text blue
+        }
     }
+
+    document.querySelector('#response').style.color = 'red'
     
     
 </script>
