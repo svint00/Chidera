@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+        <section class="container row mx-auto">
+            <form action="" class="col-12 col-md-6 col-lg-5 mx-auto card p-4 py-5 shadow my-5">
+            <label for=""> Username</label>
+            <input type="text" name="" id="username" class="form-control mb-4">
+
+            <label for=""> Password </label>
+            <input type="password" name="" id="password" class="form-control mb-4">
+            <div id="response" class="py-1"></div>
+            <button type="button" onclick="submit_form()" class="btn btn-primary"> Submit</button>
+        </form>
+        </section>
+</body>
+<script>
+    function submit_form(){
+        let username = document.querySelector('#username')
+        let pasword = document.querySelector('#password')
+        let response = document.querySelector('#response')
+        if(username.value == ''){
+            response.innerHTML = "Username is required";
+            response.className='text-danger py-1' 
+        }
+        else if(password.value == ''){
+            response.innerHTML = "Password is required";
+            response.className='text-danger py-1' 
+        }else{
+            response.innerHTML = "Login Successfull "
+            response.className='text-primary py-1' 
+
+            const data = {
+                username:username.value,
+                password:password.value
+            }
+            // request to backend
+        }
+    }
+</script>
+</html>

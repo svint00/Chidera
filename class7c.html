@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container row mx-auto" id="product_container">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card p-4 my-3 shadow">
+                    <div class="fw-bold"> Name</div>
+                    <div class="d-flex">
+                        <small> Price :00</small>
+                        <small> color :00</small>
+                        <small> qty :00</small>
+                    </div>
+                    <div>
+                        <ul>
+                            <li> Feature 1</li>
+                            <li> Feature 1</li>
+                            <li> Feature 1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <table class="my-5 table">
+        <tr>
+
+            <th> #</th>
+            <th> Name</th>
+            <th> Price</th>
+            <th> Qty</th>
+        </tr>
+    </table>
+</body>
+<script>
+    const products = [
+        {
+            name: "Dell",
+            price: 100,
+            color: 'black',
+            qty: 1,
+            features: {
+                Ram: 16,
+                SSD: 256,
+                Processor: 2.8
+            }
+        },
+        {
+            name: "Toyota",
+            price: 1200,
+            color: 'red',
+            qty: 1,
+            features: {
+                Model: "Camry",
+                Year: 2024,
+                Transmission: "AUTO"
+            }
+        },
+        {
+            name: "Air Conditioner",
+            price: 100,
+            color: 'Blue',
+            qty: 4,
+            features: {
+                "Remote Control": "YES",
+                "Auto Off": "YES",
+            }
+        }
+    ]
+    let ui_temp = '';
+    products.forEach(p=>{
+        let features = '';
+        for(x in p.features){
+            features+=`<li>${x} : <b>${p.features[x]} </b></li>`
+        }
+        ui_temp +=`<div class="col-12 col-md-6 col-lg-4">
+                <div class="card p-4 my-3 shadow">
+                    <div class="fw-bold"> ${p.name}</div>
+                    <div class="d-flex flex-column p-3 bg-warning-subtle rounded-3 ">
+                        <small> Price :${p.price}</small>
+                        <small> color :${p.color}</small>
+                        <small> qty :${p.qty}</small>
+                    </div>
+                    <div>
+                        <ul class='m-3'>
+                        ${features}
+                        </ul>
+                    </div>
+                </div>
+            </div>`
+    })
+    document.querySelector('#product_container').innerHTML = ui_temp;
+</script>
+</html>
+
+<!--  Print same data in a table [name, price and qty]-->
